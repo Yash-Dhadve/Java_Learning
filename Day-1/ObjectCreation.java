@@ -1,10 +1,10 @@
-class car{
+class ObjectCreation{
 
     String brand;
     int speed;
 
     public static void main(String[] args){
-        car car1 = new car();
+        ObjectCreation car1 = new ObjectCreation();
 
         car1.brand = "Toyota";
         car1.speed = 120;
