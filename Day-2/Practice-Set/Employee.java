@@ -11,6 +11,8 @@ public class Employee {
 
     public static void main(String[] args) {
         Employee e0 = new Employee();
+        e0.name = "Yash";
+        e0.salary = 10000;
 
         System.out.println("Name: " + e0.name);
         System.out.println("Salary: " + e0.salary);
