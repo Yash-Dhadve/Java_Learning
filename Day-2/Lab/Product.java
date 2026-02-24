@@ -19,9 +19,11 @@ public class Product {
         this.productName = productName;
         this.price = price;
         this.quantity = quantity;
-        total = price * quantity;
     }
 
+    int getTotal(){
+        return price*quantity;
+    }
     public static void main(String[] args) {
         
         Product p1 = new Product("ABC", 20, 5);
@@ -30,12 +32,12 @@ public class Product {
         System.out.println("Product Name: " + p1.productName);
         System.out.println("Price: " + p1.price);
         System.out.println("Quantity: " + p1.quantity);
-        System.out.println("Total Price: " + p1.total +"\n");
+        System.out.println("Total Price: " + p1.getTotal() +"\n");
 
         System.out.println("Product Name: " + p2.productName);
         System.out.println("Price: " + p2.price);
         System.out.println("Quantity: " + p2.quantity);
-        System.out.println("Total Price: " + p2.total);
+        System.out.println("Total Price: " + p2.getTotal());
     }
 
     
