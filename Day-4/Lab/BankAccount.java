@@ -38,7 +38,7 @@ public class BankAccount {
         } else {
             System.out.println("Invalid or insufficient balance!");
         }
-        }
+    }
 
     void checkBalance(){
         System.out.println("Account Balance: "+balance+"\n");
