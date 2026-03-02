@@ -27,8 +27,8 @@ class Dog extends Animal{
 
 public class Main {
     public static void main(String[] args) {
-        Dog dog = new Dog("Tommy");
-        System.out.println("Brand: " + dog.name);
+        Dog dog = new Dog("Dog");
+        System.out.println("Animal: " + dog.name);
         dog.makeSound();
     }
 }
