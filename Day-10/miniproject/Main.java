@@ -24,7 +24,7 @@ class BankAccount{
 }
 
 class SavingsAccount extends BankAccount {
-    double interestRate;
+    private double interestRate;
 
     SavingsAccount(String name, double balance, double rate) {
         super(name, balance);
@@ -32,7 +32,7 @@ class SavingsAccount extends BankAccount {
     }
 
     public double calculateInterest() {
-        return getBalance() * interestRate;
+        return getBalance() * (interestRate/100);
     }
 }
 
