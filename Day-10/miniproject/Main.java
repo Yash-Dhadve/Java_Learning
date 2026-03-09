@@ -1,3 +1,5 @@
+// Day-11 Add method displayDetails() in both classes and override in child.
+
 
 class BankAccount{
     protected String accountHolder;
@@ -21,6 +23,11 @@ class BankAccount{
     public double getBalance(){
         return balance;
     }
+
+    public void displayDetails(){
+        System.out.println("Account Holder: "+accountHolder);
+        System.out.println("Account Balance: "+balance);
+    }
 }
 
 class SavingsAccount extends BankAccount {
@@ -34,16 +41,24 @@ class SavingsAccount extends BankAccount {
     public double calculateInterest() {
         return getBalance() * (interestRate/100);
     }
+
+    @Override
+    public void displayDetails(){
+        super.displayDetails();
+        System.out.println("Account Interest Rate: "+interestRate);
+        System.out.println("Calculated Interest: "+calculateInterest()+"\n");
+    }
 }
 
 class Main{
     public static void main(String[] args) {
         SavingsAccount acc1 = new SavingsAccount("Yash Dhave", 1000, 2);
 
-        System.out.println("Account Balance: "+acc1.getBalance()+"\n");
+        System.out.println("Account Balance: "+acc1.getBalance());
         acc1.deposit(500);
-        System.out.println("Account Balance After Depositing: "+acc1.getBalance()+"\n");
+        System.out.println("Account Balance After Depositing: "+acc1.getBalance());
         acc1.withdraw(200);
         System.out.println("Account Balance After Withdraw: "+acc1.getBalance()+"\n");
+        acc1.displayDetails();
     }
 }
